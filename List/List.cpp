@@ -28,7 +28,27 @@ bool List::Insert(Type item)
 {
 	if (IsFull() == false)
 	{
-		items[sizeOfList] = item;
+		if (IsEmpty() == true)
+			items[0] = item;
+			
+		else
+		{
+			for (int i = 0; i < sizeOfList; i++)
+			{
+				if (items[i] > item)
+				{
+					for (int j = sizeOfList; i < j; j--)
+						items[j] = items[j - 1];
+
+					items[i] = item;
+					i = sizeOfList;
+				}
+				else if (i + 1 == sizeOfList)
+				{
+					items[sizeOfList] = item;
+				}
+			}
+		}
 
 		sizeOfList++;
 		return true;
