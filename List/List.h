@@ -10,6 +10,8 @@ public:
 	// Constructor
 	List();
 
+	List(int listSize);
+
 	// Destructor
 	~List();
 
@@ -33,7 +35,7 @@ public:
 	void ResetList();
 
 private:
-	Type items[MAX_SIZE_LIST];
+	Type* items;
 	int sizeOfList;
 	int pos;
 };

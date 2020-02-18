@@ -6,7 +6,11 @@ using namespace std;
 
 int main()
 {
-	List l;
+	int input;
+	cout << "Input size: ";
+	cin >> input;
+
+	List l(input);
 
 	cout << "Is empty: " << l.IsEmpty() << endl;
 	cout << "Is full: " << l.IsFull() << endl;

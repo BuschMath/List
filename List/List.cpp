@@ -4,6 +4,16 @@ List::List()
 {
 	sizeOfList = 0;
 	pos = -1;
+
+	items = new Type[MAX_SIZE_LIST];
+}
+
+List::List(int listSize)
+{
+	sizeOfList = 0;
+	pos = -1;
+
+	items = new Type[listSize];
 }
 
 List::~List()
